@@ -51,27 +51,30 @@ class ProductController extends Controller
 //            }
 //            print_r();
 //        }
-//        dump($request->request);
-//        die;
-        if ($request->isXmlHttpRequest()) {
-            $requestData = $request->request;
-            $name = $requestData->get('name');
-            $category = $requestData->get('category');
-            $manufacturer = $requestData->get('manufacturer');
-            $price = $requestData->get('price');
-            $slug = $requestData->get('slug');
+        if ($form->isValid()) {
+            $requestData = $request->request->all()['appbundle_product'];
+            unset($requestData['_token']);
 
-            $product->setName($name);
-            $product->setCategory($category);
-            $product->setManufacturer($manufacturer);
-            $product->setPrice($price);
-            $product->setSlug($slug);
+//            dump($requestData);die;
+//            $name = $requestData->get('name');
+//            $category = $requestData->get('category');
+//            $manufacturer = $requestData->get('manufacturer');
+//            $price = $requestData->get('price');
+//            $slug = $requestData->get('slug');
+//
+//            $product->setName($name);
+//            $product->setCategory($category);
+//            $product->setManufacturer($manufacturer);
+//            $product->setPrice($price);
+//            $product->setSlug($slug);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($product);
             $em->flush();
 
-            return new Response('Product Created!');
+            $requestData['id'] = $product->getId();
+
+            return new Response(json_encode($requestData), 200);
 //            return $this->redirectToRoute('_show', array('id' => $product->getId()));
         }
 
@@ -88,17 +91,19 @@ class ProductController extends Controller
     /**
      * Finds and displays a product entity.
      *
-     * @Route("/{id}", name="_show")
-     * @Method("GET")
+     * @Route("/view", name="_view")
+     * @Method("POST")
      */
-    public function showAction(Product $product)
+    public function viewAction()
     {
-        $deleteForm = $this->createDeleteForm($product);
+        $em = $this->getDoctrine()->getManager();
 
-        return $this->render('product/show.html.twig', array(
-            'product' => $product,
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $products = $em->getRepository('AppBundle:Product')->getAllProducts();
+        foreach ($products as $product) {
+            $product['editable'] = false;
+        }
+
+        return new Response(json_encode($products), 200);
     }
 
     /**
@@ -109,20 +114,24 @@ class ProductController extends Controller
      */
     public function editAction(Request $request, Product $product)
     {
-        $deleteForm = $this->createDeleteForm($product);
         $editForm = $this->createForm('AppBundle\Form\ProductType', $product);
         $editForm->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $result = [
+                'id' => $product->getId(),
+                'name' => $product->getName(),
+                'category' => $product->getName(),
+                'manufacturer' => $product->getName(),
+            ];
 
-            return $this->redirectToRoute('_edit', array('id' => $product->getId()));
+            return new Response(json_encode($result), 200);
         }
 
         return $this->render('product/edit.html.twig', array(
             'product' => $product,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 

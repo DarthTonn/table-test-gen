@@ -1,63 +1,19 @@
-{#<h1>Product creation</h1>#}
 {{ form_start(form) }}
 <div class="form-group">
     <label for="appbundle_product_name" class="required">Name</label>
     {{ form_widget(form.name, {'attr': {'v-model': 'name ','class': 'form-control'}}) }}
-    {#<input type="text"#}
-    {#class="form-control"#}
-    {#id="appbundle_product_name"#}
-    {#name="appbundle_product[name]"#}
-    {#required="required"#}
-    {#v-model="name"#}
-    {#maxlength="255">#}
 </div>
 <div class="form-group">
     <label for="appbundle_product_category" class="required">Category</label>
     {{ form_widget(form.category, {'attr': {'v-model': 'category', 'class': 'form-control'}}) }}
-    {#<input type="text"#}
-    {#class="form-control"#}
-    {#id="appbundle_product_category"#}
-    {#name="appbundle_product[category]"#}
-    {#required="required"#}
-    {#v-model="category"#}
-    {#maxlength="255">#}
 </div>
 <div class="form-group">
     <label for="appbundle_product_manufacturer" class="required">Manufacturer</label>
     {{ form_widget(form.manufacturer, {'attr': {'v-model': 'manufacturer', 'class': 'form-control'}}) }}
 </div>
-<div class="form-group">
-    <label for="appbundle_product_price" class="required">Price</label>
-    {{ form_widget(form.price, {'attr': {'v-model': 'price', 'class': 'form-control'}}) }}
-    {#<input type="text"#}
-    {#class="form-control"#}
-    {#id="appbundle_product_price"#}
-    {#name="appbundle_product[price]"#}
-    {#required="required"#}
-    {#v-model="price"#}
-    {#maxlength="255">#}
-</div>
-<div class="form-group">
-    <label for="appbundle_product_slug" class="required">Slug</label>
-    {{ form_widget(form.slug, {'attr': {'class': 'form-control', 'v-model': 'slug'}}) }}
-    {#<input type="text"#}
-    {#class="form-control"#}
-    {#id="appbundle_product_slug"#}
-    {#name="appbundle_product[slug]"#}
-    {#required="required"#}
-    {#v-model="slug"#}
-    {#maxlength="255">#}
-</div>
-<input type="submit" @click="onSubmit" value="Create"/>
+<input type="submit" @click="onSubmitCreate" value="Create"/>
 <input type="hidden" name="_csrf_token"
        value="{{ csrf_token('authenticate') }}"
 >
 {{ form_errors(form) }}
 {{ form_end(form) }}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('_index') }}">Back to the list</a>#}
-        {#</li>#}
-    {#</ul>#}
-{#{% endblock %}#}

@@ -42,20 +42,6 @@ class Product
      */
     private $manufacturer;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="price", type="string", length=255)
-     */
-    private $price;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="slug", type="string", length=255)
-     */
-    private $slug;
-
 
     /**
      * Get id
@@ -137,54 +123,6 @@ class Product
     public function getManufacturer()
     {
         return $this->manufacturer;
-    }
-
-    /**
-     * Set price
-     *
-     * @param string $price
-     *
-     * @return Product
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return string
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     *
-     * @return Product
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 }
 

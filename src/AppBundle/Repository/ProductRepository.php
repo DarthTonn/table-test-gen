@@ -10,4 +10,20 @@ namespace AppBundle\Repository;
  */
 class ProductRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function getAllProducts()
+    {
+        $qb = $this->createQueryBuilder('qb')
+            ->select(
+                'qb.id',
+                'qb.name',
+                'qb.category',
+                'qb.manufacturer'
+            )
+        ;
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }
