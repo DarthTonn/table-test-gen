@@ -22,29 +22,29 @@ class __TwigTemplate_f5c77a8f51bc6c3c949587f947605ff2a1d00b48e4354ae51c93dd11fe3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aad25631e89a17f9ac8df76eb0ef39a70bb043fea58c8426e7ba32f48a698bac = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_aad25631e89a17f9ac8df76eb0ef39a70bb043fea58c8426e7ba32f48a698bac->enter($__internal_aad25631e89a17f9ac8df76eb0ef39a70bb043fea58c8426e7ba32f48a698bac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "product/index.html.twig"));
+        $__internal_c978591c21f853358753a0cfdd56ebc115427da8a6e8a1766c893a51f1e03922 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c978591c21f853358753a0cfdd56ebc115427da8a6e8a1766c893a51f1e03922->enter($__internal_c978591c21f853358753a0cfdd56ebc115427da8a6e8a1766c893a51f1e03922_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "product/index.html.twig"));
 
-        $__internal_1733ee04d099b4ba68a82d1d41feaf124e2ff60727400cacdf03ff15234960d1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1733ee04d099b4ba68a82d1d41feaf124e2ff60727400cacdf03ff15234960d1->enter($__internal_1733ee04d099b4ba68a82d1d41feaf124e2ff60727400cacdf03ff15234960d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "product/index.html.twig"));
+        $__internal_061920663af584f65b5795b852ca0dde0d6097e161de9accb264a639adf34141 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_061920663af584f65b5795b852ca0dde0d6097e161de9accb264a639adf34141->enter($__internal_061920663af584f65b5795b852ca0dde0d6097e161de9accb264a639adf34141_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "product/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_aad25631e89a17f9ac8df76eb0ef39a70bb043fea58c8426e7ba32f48a698bac->leave($__internal_aad25631e89a17f9ac8df76eb0ef39a70bb043fea58c8426e7ba32f48a698bac_prof);
+        $__internal_c978591c21f853358753a0cfdd56ebc115427da8a6e8a1766c893a51f1e03922->leave($__internal_c978591c21f853358753a0cfdd56ebc115427da8a6e8a1766c893a51f1e03922_prof);
 
         
-        $__internal_1733ee04d099b4ba68a82d1d41feaf124e2ff60727400cacdf03ff15234960d1->leave($__internal_1733ee04d099b4ba68a82d1d41feaf124e2ff60727400cacdf03ff15234960d1_prof);
+        $__internal_061920663af584f65b5795b852ca0dde0d6097e161de9accb264a639adf34141->leave($__internal_061920663af584f65b5795b852ca0dde0d6097e161de9accb264a639adf34141_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9a61f89e89929b19beecad760d7f738a0d940f38a879767b74e9a5027450ab01 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9a61f89e89929b19beecad760d7f738a0d940f38a879767b74e9a5027450ab01->enter($__internal_9a61f89e89929b19beecad760d7f738a0d940f38a879767b74e9a5027450ab01_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5e3e364836e955d25d49d523c348845192e613e86b34dc16af59c4b08a836bb0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_5e3e364836e955d25d49d523c348845192e613e86b34dc16af59c4b08a836bb0->enter($__internal_5e3e364836e955d25d49d523c348845192e613e86b34dc16af59c4b08a836bb0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_e2e8dd89a65af9c985897b03d943475c65c4afc76d5f6dc898f06cb2cff0c044 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e2e8dd89a65af9c985897b03d943475c65c4afc76d5f6dc898f06cb2cff0c044->enter($__internal_e2e8dd89a65af9c985897b03d943475c65c4afc76d5f6dc898f06cb2cff0c044_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_035044d74bb00c9f809e3fcbc9fb1b26f144b525701fd7a22023cffe43331a47 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_035044d74bb00c9f809e3fcbc9fb1b26f144b525701fd7a22023cffe43331a47->enter($__internal_035044d74bb00c9f809e3fcbc9fb1b26f144b525701fd7a22023cffe43331a47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Products list</h1>
@@ -61,28 +61,37 @@ class __TwigTemplate_f5c77a8f51bc6c3c949587f947605ff2a1d00b48e4354ae51c93dd11fe3
             </tr>
             </thead>
             <tbody>
-                <tr is=\"viewlist\" v-for=\"product in products\" :product=\"product\" :key=\"product.id\"  @edit=\"editProduct(product)\">
-
-                    <modal-edit v-show=\"showEditModal\" :product=\"product\" @close=\"showEditModal = false\">
-                        ";
+                <tr is=\"viewlist\" v-for=\"(product, key) in products\"
+                    :product=\"product\"
+                    :key=\"product.id\"
+                    ";
         // line 22
-        echo "                    </modal-edit>
-                </tr>
-                ";
+        echo "                    @remove=\"removeProduct(key, product)\">
+
+                    ";
         // line 25
+        echo "                        ";
+        // line 26
+        echo "                    ";
+        // line 27
+        echo "                </tr>
+                ";
+        // line 29
         echo "
             </tbody>
         </table>
         <button class=\"btn btn-default\" @click=\"showCreateModal = true\">Create a new product</button>
 
-        <modal-edit v-show=\"showEditModal\" @close=\"showEditModal = false\">
-            ";
-        // line 32
-        echo "        </modal-edit>
-
+        ";
+        // line 35
+        echo "            ";
+        // line 36
+        echo "        ";
+        // line 37
+        echo "
         <modal v-show=\"showCreateModal\" @close=\"showCreateModal = false\">
             ";
-        // line 35
+        // line 39
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("AppBundle:Product:new"));
         echo "
         </modal>
@@ -90,46 +99,46 @@ class __TwigTemplate_f5c77a8f51bc6c3c949587f947605ff2a1d00b48e4354ae51c93dd11fe3
     </div>
 ";
         
-        $__internal_e2e8dd89a65af9c985897b03d943475c65c4afc76d5f6dc898f06cb2cff0c044->leave($__internal_e2e8dd89a65af9c985897b03d943475c65c4afc76d5f6dc898f06cb2cff0c044_prof);
+        $__internal_035044d74bb00c9f809e3fcbc9fb1b26f144b525701fd7a22023cffe43331a47->leave($__internal_035044d74bb00c9f809e3fcbc9fb1b26f144b525701fd7a22023cffe43331a47_prof);
 
         
-        $__internal_9a61f89e89929b19beecad760d7f738a0d940f38a879767b74e9a5027450ab01->leave($__internal_9a61f89e89929b19beecad760d7f738a0d940f38a879767b74e9a5027450ab01_prof);
+        $__internal_5e3e364836e955d25d49d523c348845192e613e86b34dc16af59c4b08a836bb0->leave($__internal_5e3e364836e955d25d49d523c348845192e613e86b34dc16af59c4b08a836bb0_prof);
 
     }
 
-    // line 41
+    // line 45
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_6c2775299e15c6d6c427c76a49bb51ddebfcb976a602329034472739a6008cd9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6c2775299e15c6d6c427c76a49bb51ddebfcb976a602329034472739a6008cd9->enter($__internal_6c2775299e15c6d6c427c76a49bb51ddebfcb976a602329034472739a6008cd9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_69a8a4278dc89a3e092f9ab6995d62c6713fee707088f4309a61bc7f49c5aaf9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_69a8a4278dc89a3e092f9ab6995d62c6713fee707088f4309a61bc7f49c5aaf9->enter($__internal_69a8a4278dc89a3e092f9ab6995d62c6713fee707088f4309a61bc7f49c5aaf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_ff8727006ad2bef300b0fb910e8dc5a8e2b40ab82a5d749c2d1e4f7a3292a0a9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ff8727006ad2bef300b0fb910e8dc5a8e2b40ab82a5d749c2d1e4f7a3292a0a9->enter($__internal_ff8727006ad2bef300b0fb910e8dc5a8e2b40ab82a5d749c2d1e4f7a3292a0a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_22e18834ee93e4a4779a8c45427978b09f3e8dba8ba3e2b68d2c06c5a879d082 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_22e18834ee93e4a4779a8c45427978b09f3e8dba8ba3e2b68d2c06c5a879d082->enter($__internal_22e18834ee93e4a4779a8c45427978b09f3e8dba8ba3e2b68d2c06c5a879d082_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 42
+        // line 46
         echo "    ";
-        // line 43
+        // line 47
         echo "        ";
-        // line 44
+        // line 48
         echo "    ";
-        // line 45
+        // line 49
         echo "    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
     <script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>
     <script src=\"https://unpkg.com/vue\"></script>
     <script src=\"";
-        // line 48
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("includes/modal.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 49
+        // line 53
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("includes/create.js"), "html", null, true);
         echo "\"></script>
 ";
         
-        $__internal_ff8727006ad2bef300b0fb910e8dc5a8e2b40ab82a5d749c2d1e4f7a3292a0a9->leave($__internal_ff8727006ad2bef300b0fb910e8dc5a8e2b40ab82a5d749c2d1e4f7a3292a0a9_prof);
+        $__internal_22e18834ee93e4a4779a8c45427978b09f3e8dba8ba3e2b68d2c06c5a879d082->leave($__internal_22e18834ee93e4a4779a8c45427978b09f3e8dba8ba3e2b68d2c06c5a879d082_prof);
 
         
-        $__internal_6c2775299e15c6d6c427c76a49bb51ddebfcb976a602329034472739a6008cd9->leave($__internal_6c2775299e15c6d6c427c76a49bb51ddebfcb976a602329034472739a6008cd9_prof);
+        $__internal_69a8a4278dc89a3e092f9ab6995d62c6713fee707088f4309a61bc7f49c5aaf9->leave($__internal_69a8a4278dc89a3e092f9ab6995d62c6713fee707088f4309a61bc7f49c5aaf9_prof);
 
     }
 
@@ -145,7 +154,7 @@ class __TwigTemplate_f5c77a8f51bc6c3c949587f947605ff2a1d00b48e4354ae51c93dd11fe3
 
     public function getDebugInfo()
     {
-        return array (  125 => 49,  121 => 48,  116 => 45,  114 => 44,  112 => 43,  110 => 42,  101 => 41,  86 => 35,  81 => 32,  73 => 25,  69 => 22,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  134 => 53,  130 => 52,  125 => 49,  123 => 48,  121 => 47,  119 => 46,  110 => 45,  95 => 39,  91 => 37,  89 => 36,  87 => 35,  80 => 29,  77 => 27,  75 => 26,  73 => 25,  69 => 22,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -175,11 +184,15 @@ class __TwigTemplate_f5c77a8f51bc6c3c949587f947605ff2a1d00b48e4354ae51c93dd11fe3
             </tr>
             </thead>
             <tbody>
-                <tr is=\"viewlist\" v-for=\"product in products\" :product=\"product\" :key=\"product.id\"  @edit=\"editProduct(product)\">
+                <tr is=\"viewlist\" v-for=\"(product, key) in products\"
+                    :product=\"product\"
+                    :key=\"product.id\"
+                    {#@remove=\"todos.splice(key, 1)\"#}
+                    @remove=\"removeProduct(key, product)\">
 
-                    <modal-edit v-show=\"showEditModal\" :product=\"product\" @close=\"showEditModal = false\">
+                    {#<modal-edit v-show=\"showEditModal\" :product=\"product\" @close=\"showEditModal = false\">#}
                         {#{{ render(controller('AppBundle:Product:edit')) }}#}
-                    </modal-edit>
+                    {#</modal-edit>#}
                 </tr>
                 {#<tr v-if=\"product.editable\" is=\"viewlist-edit\" v-for=\"product in products\" :product=\"product\" :key=\"product.id\"></tr>#}
 
@@ -187,9 +200,9 @@ class __TwigTemplate_f5c77a8f51bc6c3c949587f947605ff2a1d00b48e4354ae51c93dd11fe3
         </table>
         <button class=\"btn btn-default\" @click=\"showCreateModal = true\">Create a new product</button>
 
-        <modal-edit v-show=\"showEditModal\" @close=\"showEditModal = false\">
+        {#<modal-edit v-show=\"showEditModal\" @close=\"showEditModal = false\">#}
             {#{{ render(controller('AppBundle:Product:edit')) }}#}
-        </modal-edit>
+        {#</modal-edit>#}
 
         <modal v-show=\"showCreateModal\" @close=\"showCreateModal = false\">
             {{ render(controller('AppBundle:Product:new')) }}

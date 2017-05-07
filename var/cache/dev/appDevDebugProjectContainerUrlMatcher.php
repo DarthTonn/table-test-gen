@@ -138,8 +138,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         // _view
         if ($pathinfo === '/view') {
-            if ($this->context->getMethod() != 'POST') {
-                $allow[] = 'POST';
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
                 goto not__view;
             }
 
@@ -147,27 +147,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not__view:
 
-        // _edit
-        if (preg_match('#^/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                goto not__edit;
-            }
-
-            return $this->mergeDefaults(array_replace($matches, array('_route' => '_edit')), array (  '_controller' => 'AppBundle\\Controller\\ProductController::editAction',));
-        }
-        not__edit:
-
-        // _delete
-        if (preg_match('#^/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        // _delete_product
+        if (0 === strpos($pathinfo, '/delete-product') && preg_match('#^/delete\\-product/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             if ($this->context->getMethod() != 'DELETE') {
                 $allow[] = 'DELETE';
-                goto not__delete;
+                goto not__delete_product;
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => '_delete')), array (  '_controller' => 'AppBundle\\Controller\\ProductController::deleteAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => '_delete_product')), array (  '_controller' => 'AppBundle\\Controller\\ProductController::deleteAction',));
         }
-        not__delete:
+        not__delete_product:
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

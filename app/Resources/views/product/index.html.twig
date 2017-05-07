@@ -15,7 +15,11 @@
             </tr>
             </thead>
             <tbody>
-                <tr is="viewlist" v-for="product in products" :product="product" :key="product.id"  @edit="editProduct(product)">
+                <tr is="viewlist" v-for="(product, key) in products"
+                    :product="product"
+                    :key="product.id"
+                    {#@remove="todos.splice(key, 1)"#}
+                    @remove="removeProduct(key, product)">
 
                     {#<modal-edit v-show="showEditModal" :product="product" @close="showEditModal = false">#}
                         {#{{ render(controller('AppBundle:Product:edit')) }}#}

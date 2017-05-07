@@ -41,7 +41,7 @@ Vue.component('viewlist', {
                     <td>
                         <ul>
                             <li>    
-                                <a href="#" @click="$emit(\'edit\')">edit</a>
+                                <a href="#" @click="$emit(\'remove\')">remove</a>
                             </li>
                         </ul>
                     </td>
@@ -70,6 +70,7 @@ new Vue({
             event.preventDefault();
             var self = this;
             var formData = $('form[name="appbundle_product"]').serialize();
+            console.log(formData);
             axios.post('new', formData)
                 .then(function (response) {
                     self.showCreateModal = false;
@@ -81,9 +82,15 @@ new Vue({
             console.log(axios.post('view'));
             return axios.post('view');
         },
-        editProduct (product) {
-            product.editable = true;
-            console.log(product);
+        removeProduct: function (key, product) {
+            let self = this;
+            self.products.splice(key, 1);
+            let url = 'delete-product/' + product.id;
+
+            axios.delete(url)
+                .then(function (response) {
+                    alert(response.data);
+                });
         }
     },
     created() {
